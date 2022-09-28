@@ -1,0 +1,28 @@
+.topbar01 {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.topbar01Left {
+  margin-left: 21px;
+}
+
+.topbar01LeftLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.topbar01Text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
