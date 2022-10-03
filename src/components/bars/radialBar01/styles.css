@@ -1,0 +1,65 @@
+.radialBar01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2f363e;
+}
+
+.radialBar01__menu {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radialBar01__menu.active .radialBar01__toggle {
+  transform: rotate(315deg);
+}
+
+.radialBar01__menu__item {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transform-origin: 140px;
+  transform: rotate(0deg) translateX(110px);
+  color: #fff;
+  transition: 0.5s all ease-in-out;
+}
+
+.radialBar01__menu__item__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  border: 2px solid;
+  border-radius: 50%;
+  transition: 0.5s all ease-in-out;
+}
+
+.radialBar01__menu__item__link:hover {
+  background: var(--clr);
+  color: #fff !important;
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+}
+
+.radialBar01__toggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #2f363e;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 998;
+  font-size: 2rem;
+  transition: transform 1.2s ease-in-out;
+}

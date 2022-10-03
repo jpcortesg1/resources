@@ -1,12 +1,12 @@
 import CardComponent from "../../components/cards/card/Card";
 import { useLocation } from "react-router-dom";
-import { cardData } from "./dataCard";
-import "./card.css";
+import { dataBars } from "./dataBars";
+import "./bars.css";
 
-export default function Card() {
+export default function Bars() {
   const { pathname } = useLocation();
   const id = pathname.split("/")[2];
-  const component = cardData.find((item) => item.id === parseInt(id))?.content;
+  const component = dataBars.find((item) => item.id === parseInt(id))?.content;
 
   if (component) return component;
 
@@ -15,8 +15,8 @@ export default function Card() {
       <h1 className="card__title">Cards</h1>
 
       <div className="card_cards">
-        {cardData.map((card, index) => (
-          <CardComponent key={index} card={card} baseLink="cards" />
+        {dataBars.map((card, index) => (
+          <CardComponent key={index} baseLink="bars" card={card} />
         ))}
       </div>
     </div>

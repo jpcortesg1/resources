@@ -5,9 +5,10 @@ import { CardData } from "../../../interfaces/card/Card";
 
 interface CardComponentProps {
   card: CardData;
+  baseLink: string;
 }
 
-export default function Card({ card }: CardComponentProps) {
+export default function Card({ card, baseLink }: CardComponentProps) {
   const { id, title, description, youtube } = card;
   const navigate = useNavigate();
 
@@ -21,7 +22,7 @@ export default function Card({ card }: CardComponentProps) {
       <div className="card_buttons">
         <button
           className="card_card_button"
-          onClick={() => navigation(`/cards/${id}`)}
+          onClick={() => navigation(`/${baseLink}/${id}`)}
         >
           See
           <span className="card__card__button__icon">

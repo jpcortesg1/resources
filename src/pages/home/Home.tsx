@@ -8,15 +8,16 @@ interface CardProps {
 
 const Card = ({ content }: CardProps) => {
   const navigate = useNavigate();
+  const { title, description, link } = content;
 
   const navigation = (path: string) => {
     navigate(path);
   };
   return (
     <div className="homeCard">
-      <h3 className="homeCardTitle">Cards</h3>
-      <p className="homeCardDescription">Card Related Content</p>
-      <button className="homeCardButton" onClick={() => navigation("/cards")}>
+      <h3 className="homeCardTitle">{title}</h3>
+      <p className="homeCardDescription">{description}</p>
+      <button className="homeCardButton" onClick={() => navigation(link)}>
         See all cards
       </button>
     </div>
@@ -29,8 +30,8 @@ export default function Home() {
       <h1 className="homeTitle">Resources</h1>
 
       <div className="homeContainer">
-        {homeData.map((data) => (
-          <Card content={data} />
+        {homeData.map((data, index) => (
+          <Card key={index} content={data} />
         ))}
       </div>
     </div>

@@ -8,6 +8,11 @@ export const homeData: HomeData[] = [
   {
     title: "Cards",
     description: "All cards",
-    link: "/card",
+    link: "/cards",
+  },
+  {
+    title: "Bars",
+    description: "All bars",
+    link: "/bars",
   },
 ];
